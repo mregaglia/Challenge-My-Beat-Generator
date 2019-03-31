@@ -24,4 +24,7 @@ Choose a music genre and a theme/ambiance randomly and do your shit with your ma
   </Layout>
 )
 
+
+
 export default IndexPage
+
