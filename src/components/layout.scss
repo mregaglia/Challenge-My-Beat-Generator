@@ -1,3 +1,14 @@
+// BULMA VARIABLE OVER-RIDES
+
+// $primary: #b084eb;
+// $blue: #7dc1ff;
+// $input-shadow: none;
+// $info: $blue;
+// $background: #fafafa;
+@import '../../node_modules/bulma/bulma.sass';
+
+// ...All the Gatsby default stuff.
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

@@ -10,15 +10,28 @@ const Generator = () => (
             node {
               id
               genre
+              ambiance
             }
           }
         }
         }
         `}
         render={data => (
-            <>
-                {data.allDataJson.edges[0].node.genre.map(x=><li>{x}</li>)}
-            </>
+            <div className="columns">
+              <div className="column">
+                  <h4>Genre : </h4>
+                  <ul>
+                      {data.allDataJson.edges[0].node.genre.map((x, index)=><li key={index}>{x}</li>)}
+                  </ul>
+              </div>
+
+              <div className="column">
+                  <h4>Ambiance : </h4>
+                  <ul>
+                      {data.allDataJson.edges[0].node.ambiance.map((x, index)=><li key={index}>{x}</li>)}
+                  </ul>
+              </div>
+            </div>
         )}
     />
 );
