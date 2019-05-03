@@ -1,9 +1,9 @@
 import React from "react"
 // import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-// import Image from "../components/image"
-import Generator from "../components/generator"
+import Image from "../components/image"
+import ShowAll from "../components/showAll"
+// import Shuffle from "../components/shuffle"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -18,8 +18,9 @@ Choose a music genre and a theme/ambiance randomly and do your best with your ma
 </p>
     <div style={{ marginBottom: `1.45rem` }}>
 
-      <Generator />
-      {/* <Image /> */}
+      <ShowAll />
+      {/* <Shuffle /> */}
+      <Image />
     </div>
     {/* <Link to="/page-2/">Go to page 2</Link> */}
   </Layout>
@@ -28,4 +29,3 @@ Choose a music genre and a theme/ambiance randomly and do your best with your ma
 
 
 export default IndexPage
-
