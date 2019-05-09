@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import ShowAll from "../components/showAll"
-// import Shuffle from "../components/shuffle"
+import Shuffle from "../components/shuffle"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -14,12 +14,12 @@ const IndexPage = () => (
     You can here add some new entries or just generate a new challenge with the existing entries. Enjoy!
     </p>
     <p>Challenge My Beat is a dawless music production challenge.
-Choose a music genre and a theme/ambiance randomly and do your best with your machine to kill the challenge.
+Choose a music genre and a theme/ambiance randomly and do your best with your machines to kill the challenge.
 </p>
     <div style={{ marginBottom: `1.45rem` }}>
 
       <ShowAll />
-      {/* <Shuffle /> */}
+      <Shuffle />
       <Image />
     </div>
     {/* <Link to="/page-2/">Go to page 2</Link> */}

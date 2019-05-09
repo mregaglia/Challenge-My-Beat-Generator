@@ -1,74 +1,38 @@
-import React,  { Component } from "react"
-// import { StaticQuery, graphql} from 'gatsby'
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import "./layout.scss"
 
+const Shuffle = () => {
+    const data = useStaticQuery(
+        graphql`
+            query {
+                allDataJson {
+                edges {
+                    node {
+                    id
+                    genre
+                    ambiance
+                    }
+                    }
+                }
+            }
+        `
+    )
 
-    // <StaticQuery
-    //     query={graphql`
-    //     query MyJsonShuffleQuery {
-    //       allDataJson {
-    //         edges {
-    //             node {
-    //                 id
-    //                 genre
-    //                 ambiance
-    //             }
-    //         }
-    //       }
-    //     }
-    //     `
-    //     }
-    // />
+const getRandArrayItem = (arr) => arr[ Math.floor(Math.random() * arr.length) ]
+const AllGenre = data.allDataJson.edges[0].node.genre
+const AllAmbiance = data.allDataJson.edges[0].node.ambiance
 
-const allGenre = ({data}) => (
-    <>
-    {data.allDataJson.edges[0].node.genre}
-    </>
-)
-
-class Shuffle extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-        }
-    }
-    render(){
-
-    }
+    return (
+    <div className="columns">
+        <div className="column">
+        <p>{getRandArrayItem(AllGenre)}</p>
+        </div>
+        <div className="column">
+        <p>{getRandArrayItem(AllAmbiance)}</p>
+        </div>
+    </div>
+    )
 }
 
-export default Shuffle;
-
-// const shuffle = () => (
-//     <StaticQuery
-//         query={graphql`
-//         query MyJsonShuffleQuery {
-//           allDataJson {
-//           edges {
-//             node {
-//               id
-//               genre
-//               ambiance
-//             }
-//           }
-//         }
-//         }
-//         `}
-//         render={data => (
-//             <div className="columns">
-//               <div className="column">
-//                   <h4>Genre : </h4>
-//                   <ul>
-//                       {data.allDataJson.edges[0].node.genre.map((x, index)=><li key={index}>{x}</li>)}
-//                   </ul>
-//               </div>
-
-//               <div className="column">
-//                   <h4>Ambiance : </h4>
-//                   <ul>
-//                       {data.allDataJson.edges[0].node.ambiance.map((x, index)=><li key={index}>{x}</li>)}
-//                   </ul>
-//               </div>
-//             </div>
-//         )}
-//     />
+export default Shuffle
