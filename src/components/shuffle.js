@@ -19,14 +19,26 @@ const Shuffle = () => {
         `
     )
 
-const getRandArrayItem = (arr) => arr[ Math.floor(Math.random() * arr.length) ]
-const AllGenre = data.allDataJson.edges[0].node.genre
-const AllAmbiance = data.allDataJson.edges[0].node.ambiance
+
+const handleClick = (e) => {
+    e.preventDefault();
+    const AllGenre = data.allDataJson.edges[0].node.genre
+    // const AllAmbiance = data.allDataJson.edges[0].node.ambiance
+    const getRandArrayItem = (arr) => arr[ Math.floor(Math.random() * arr.length) ]
+    const resultGenre = getRandArrayItem(AllGenre)
+    console.log(resultGenre)
+}
+
+
+// const getRandArrayItem = (arr) => arr[ Math.floor(Math.random() * arr.length) ]
+// const AllGenre = data.allDataJson.edges[0].node.genre
+// const AllAmbiance = data.allDataJson.edges[0].node.ambiance
 
     return (
     <>
-
-    <button className="button is-warning is-fullwidth" >Randomize</button>
+<button className="button is-warning is-fullwidth" onClick={handleClick}>Randomize</button>
+    {/* {resultGenre} */}
+    {/* <button className="button is-warning is-fullwidth" >Randomize</button>
     <div className="columns">
         <div className="column">
             <p>{getRandArrayItem(AllGenre)}</p>
@@ -34,7 +46,7 @@ const AllAmbiance = data.allDataJson.edges[0].node.ambiance
         <div className="column">
             <p>{getRandArrayItem(AllAmbiance)}</p>
         </div>
-    </div>
+    </div> */}
 
     </>
     )
