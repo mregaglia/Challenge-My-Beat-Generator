@@ -18,9 +18,7 @@ const IndexPage = () => (
     {/* You can here add some new entries or just generate a new challenge with the existing entries. Enjoy! */}
     To generate a new challenge, just click on the "Randomize" button!
     </p>
-
-    <div style={{ marginBottom: `1.45rem` }}>
-
+    <div>
       <Shuffle />
       <ShowAll />
       {/* <Image /> */}
