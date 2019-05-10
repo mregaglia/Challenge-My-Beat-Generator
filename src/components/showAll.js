@@ -21,12 +21,12 @@ const showAll = () => {
   )
 
   return (
-          <div className="columns">
-            <div className="column">
+          <div className="level">
+            <div className="level-item has-text-centered">
                 <div className="dropdown is-hoverable">
                     <div className="dropdown-trigger">
                       <button className="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <h4>All Genre <FaAngleDown /></h4>
+                        <p>All Genre <FaAngleDown /></p>
                       </button>
                     </div>
                     <div className="dropdown-menu" id="dropdown-menu" role="menu">
@@ -41,11 +41,11 @@ const showAll = () => {
                 </div>
             </div>
 
-            <div className="column">
+            <div className="level-item has-text-centered">
                 <div className="dropdown is-hoverable">
                     <div className="dropdown-trigger">
                       <button className="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <h4>All Ambiance <FaAngleDown /></h4>
+                        <p>All Ambiance <FaAngleDown /></p>
                       </button>
                     </div>
                     <div className="dropdown-menu" id="dropdown-menu" role="menu">

@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import "./layout.scss"
+
 
 const Shuffle = () => {
     const data = useStaticQuery(
@@ -19,36 +20,20 @@ const Shuffle = () => {
         `
     )
 
-
-const handleClick = (e) => {
-    e.preventDefault();
-    const AllGenre = data.allDataJson.edges[0].node.genre
-    // const AllAmbiance = data.allDataJson.edges[0].node.ambiance
     const getRandArrayItem = (arr) => arr[ Math.floor(Math.random() * arr.length) ]
-    const resultGenre = getRandArrayItem(AllGenre)
-    console.log(resultGenre)
-}
 
-
-// const getRandArrayItem = (arr) => arr[ Math.floor(Math.random() * arr.length) ]
-// const AllGenre = data.allDataJson.edges[0].node.genre
-// const AllAmbiance = data.allDataJson.edges[0].node.ambiance
+    const AllGenre = data.allDataJson.edges[0].node.genre
+    const AllAmbiance = data.allDataJson.edges[0].node.ambiance
+    const [items, setItems] = useState([]);
 
     return (
-    <>
-<button className="button is-warning is-fullwidth" onClick={handleClick}>Randomize</button>
-    {/* {resultGenre} */}
-    {/* <button className="button is-warning is-fullwidth" >Randomize</button>
-    <div className="columns">
-        <div className="column">
-            <p>{getRandArrayItem(AllGenre)}</p>
-        </div>
-        <div className="column">
-            <p>{getRandArrayItem(AllAmbiance)}</p>
-        </div>
-    </div> */}
+    <div>
 
-    </>
+    <button className="button is-warning is-fullwidth"  onClick={() => setItems([ "-->  ", getRandArrayItem(AllGenre), " / ", getRandArrayItem(AllAmbiance), "  <--" ])}>Randomize</button>
+    <br/>
+    <div className="level-item has-text-centered"><p>{items}</p></div>
+
+    </div>
     )
 }
 
