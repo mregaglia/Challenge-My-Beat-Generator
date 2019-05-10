@@ -1,3 +1,4 @@
+
 // BULMA VARIABLE OVER-RIDES
 
 // $primary: #b084eb;
@@ -5,6 +6,7 @@
 // $input-shadow: none;
 // $info: $blue;
 // $background: #fafafa;
+
 @import '../../node_modules/bulma/bulma.sass';
 
 // ...All the Gatsby default stuff.
@@ -631,5 +633,22 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+
+// MY STYLES
+
+
+header {
+  margin-bottom: 1.45rem;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem ;
+  // border:red solid 2px;
+
+  h1 {
+    text-decoration: none;
+    color: red;
   }
 }

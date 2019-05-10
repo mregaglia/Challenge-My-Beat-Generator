@@ -18,8 +18,8 @@ Choose a music genre and a theme/ambiance randomly and do your best with your ma
 </p>
     <div style={{ marginBottom: `1.45rem` }}>
 
-      <ShowAll />
       <Shuffle />
+      <ShowAll />
       <Image />
     </div>
     {/* <Link to="/page-2/">Go to page 2</Link> */}

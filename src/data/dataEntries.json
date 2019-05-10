@@ -3,12 +3,20 @@
 		"techno",
 		"pop",
 		"hip-hop",
-		"acid"
+		"acid",
+		"footwork",
+		"house",
+		"noize",
+		"drone"
 	],
 	"ambiance": [
 		"strings",
 		"Sci-Fi",
 		"sunny",
-		"chill"
+		"dream",
+		"chill",
+		"beach",
+		"forest",
+		"string"
 	]
 }

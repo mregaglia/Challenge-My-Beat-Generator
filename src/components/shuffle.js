@@ -24,14 +24,19 @@ const AllGenre = data.allDataJson.edges[0].node.genre
 const AllAmbiance = data.allDataJson.edges[0].node.ambiance
 
     return (
+    <>
+
+    <button className="button is-warning is-fullwidth" >Randomize</button>
     <div className="columns">
         <div className="column">
-        <p>{getRandArrayItem(AllGenre)}</p>
+            <p>{getRandArrayItem(AllGenre)}</p>
         </div>
         <div className="column">
-        <p>{getRandArrayItem(AllAmbiance)}</p>
+            <p>{getRandArrayItem(AllAmbiance)}</p>
         </div>
     </div>
+
+    </>
     )
 }
 
