@@ -29,9 +29,9 @@ const Shuffle = () => {
     return (
     <div>
 
-    <button className="button is-warning is-fullwidth"  onClick={() => setItems([ "-->  ", getRandArrayItem(AllGenre), " / ", getRandArrayItem(AllAmbiance), "  <--" ])}>Randomize</button>
+    <button className="button is-warning randomize is-fullwidth"  onClick={() => setItems([ "-->  ", getRandArrayItem(AllGenre), " / ", getRandArrayItem(AllAmbiance), "  <--" ])}>Randomize</button>
     <br/>
-    <div className="level-item has-text-centered"><p>{items}</p></div>
+    <div className="result level-item has-text-centered"><p>{items}</p></div>
 
     </div>
     )

@@ -4,12 +4,11 @@ import React from "react"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <div
-    >
+    <div className="divTitle">
       <h1>
-        <Link to="/">
+        {/* <Link to="/"> */}
           {siteTitle}
-        </Link>
+        {/* </Link> */}
       </h1>
     </div>
   </header>

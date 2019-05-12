@@ -639,20 +639,35 @@ pre tt:after {
 
 // MY STYLES
 
-body {
+
+main {
   margin: 0 auto;
   max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  padding: 0 1.0875rem;
 }
 header {
-  margin-bottom: 1.45rem;
+  padding: 1.45rem 1.0875rem;
   margin: 0 auto;
-  max-width: 960px;
-  // padding: 1.45rem 1.0875rem ;
-  // border:red solid 2px;
+  .divTitle {
+    max-width: 960px;
+    padding: 0 1.0875rem;
+    margin: 0 auto;
+    h1 {
+      margin: 0;
+      color: $blue;
+    }
+    }
 
-  h1 {
-    text-decoration: none;
-    color: red;
-  }
+}
+
+.randomize {
+  border: none;
+}
+
+.result {
+  color: $danger;
+}
+
+.AllItems {
+  width: 150px;
 }

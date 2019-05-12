@@ -25,7 +25,7 @@ const showAll = () => {
             <div className="level-item has-text-centered">
                 <div className="dropdown is-hoverable">
                     <div className="dropdown-trigger">
-                      <button className="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <button className="button AllItems is-primary" aria-haspopup="true" aria-controls="dropdown-menu">
                         <p>All Genre <FaAngleDown /></p>
                       </button>
                     </div>
@@ -44,7 +44,7 @@ const showAll = () => {
             <div className="level-item has-text-centered">
                 <div className="dropdown is-hoverable">
                     <div className="dropdown-trigger">
-                      <button className="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <button className="button AllItems is-primary" aria-haspopup="true" aria-controls="dropdown-menu">
                         <p>All Ambiance <FaAngleDown /></p>
                       </button>
                     </div>
