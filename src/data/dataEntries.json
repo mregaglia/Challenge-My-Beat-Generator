@@ -6,7 +6,10 @@
 		"footwork",
 		"house",
 		"noize",
-		"drone"
+		"drone",
+		"Ambient",
+		"Drum and bass",
+		"Trance"
 	],
 	"ambiance": [
 		"Sci-Fi",
@@ -15,6 +18,9 @@
 		"chill",
 		"beach",
 		"forest",
-		"string"
+		"string",
+		"Caverne",
+		"Noël",
+		"Maison hantée"
 	]
 }
